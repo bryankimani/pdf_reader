@@ -10,8 +10,17 @@
       </ul>
     </div>
   <% end %>
+  <div class="mb-3">
+    <%= form.label :title, class: 'form-label' %>
+    <%= form.text_field :title, class: 'form-control' %>
+  </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="mb-3">
+    <%= form.label :pdf, class: 'form-label' %>
+    <%= form.file_field :pdf, class: 'form-control' %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class: 'btn btn-primary' %>
   </div>
 <% end %>

@@ -1,10 +1,10 @@
-<p style="color: green"><%= notice %></p>
-
-<%= render @book %>
-
-<div>
-  <%= link_to "Edit this book", edit_book_path(@book) %> |
-  <%= link_to "Back to books", books_path %>
-
-  <%= button_to "Destroy this book", @book, method: :delete %>
+<div class="container">
+  <div class="row">
+    <%= render @book %>
+    <div>
+      <%= link_to "Edit", edit_book_path(@book) %> |
+      <%= link_to "Destroy", book_path(@book), "data-turbo-method": :delete, "data-turbo-confirm": "Are you sure?" %> |
+      <%= link_to "Back to books", books_path %>
+    </div>
+  </div>
 </div>
